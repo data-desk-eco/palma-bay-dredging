@@ -1,15 +1,106 @@
 <!doctype html>
-<notebook theme="near-midnight">
+<notebook theme="midnight">
   <title>Test notebook</title>
-  <script id="1" type="text/markdown">
-    # Test notebook
+  <script id="header" type="text/markdown">
+    # Dredging in Palma Bay, Mozambique
 
-    *25 August 2025*
+    *26 August 2025*
   </script>
-  <script id="4" type="text/markdown" pinned="">
-    Hey, this is a test of Observable Notebooks!
+  <script id="intro" type="text/markdown">
+    ## Key findings
+
+    - The Dutch marine services firm Van Oord has undertaken significant dredging activity in Palma Bay in recent months, beginning in October 2024 and with the latest activity observed in June 2025.
+
+    - The primary purpose of the dredging appears to be to construct a trench for the Golfinho gas pipeline, which will bring gas from offshore to the Mozambique LNG export terminal.
+
+    - Satellite imagery shows the destruction of sensitive areas of coral, as well as large sediment plumes which are likely to damage local marine ecosystems.
+
+    - A review of project documentation suggests that the developers have faced significant problems routing the pipeline to avoid critically important habitats, notably coral reefs, in the northern part of Palma Bay.
+  
+    ---
   </script>
-  <script id="3" type="module">
+  <script id="background" type="text/markdown">
+    ## Background 
+
+    Mozambique LNG is a liquefied natural gas (LNG) export project under construction in Cabo Delgado, northern Mozambique. Work on the project has been suspended under *force majeure* since 2021, when Islamist militants [attacked](https://en.wikipedia.org/wiki/Battle_of_Palma) the nearby town of Palma, killing more than a thousand residents and displacing tens of thousands more. Four years on, the project's operator, TotalEnergies, has signalled that construction will resume [imminently](https://www.reuters.com/business/energy/totalenergies-ceo-expects-restart-mozambique-lng-project-this-summer-2025-06-18/). 
+ 
+    In April 2025, Data Desk learned that residents of the villages surrounding Palma Bay — the site of the project's main export terminal — had spotted vessels that appeared to be carrying out dredging work. A statement in the 2024 [annual report](https://vanoordjaarverslagcms.appstudio.nl//upload/136/pdfs/file/Van_Oord_Annual_Report_2024.pdf) for the project's main marine contractor, Van Oord — also published in April — appeared to confirm this:
+
+      > In 2024, we undertook preparatory works to restart the Golfinho LNG [an alternative name for Mozambique LNG] pipelay project in Mozambique, which was suspended in 2021 due to activities by insurgents. An actual restart date is being determined by our client.
+
+    In this context, we conducted a review of vessel positions (AIS) data and satellite imagery to assess the scope, scale and impact of the work. 
+
+    ---
+  </script>
+  <script id="vessel-id" type="text/markdown">
+    ## AIS analysis
+
+    Historic AIS data aggregated and published by the [Global Fishing Watch](https://globalfishingwatch.org/) (GFW) platform shows a clear uptick in vessel activity in Palma Bay in October 2024, following a long period of minimal activity while the project was fully suspended. Reviewing the vessels present since October, we identified five which are listed in a 2024 [declaration of sea-going vessels](https://www.vanoord.com/drupal/media/data/default/2024-02/Declaration%20Seagoing%20Vessels%202024.pdf) published on Van Oord's website.
+
+    |Name|Type|IMO number|MMSI number|
+    |----|----|----------|-----------|
+    |Razende Bol|Backhoe dredger|8434166|244963000|
+    |Goliath|Backhoe dredger|8342260|245829000|
+    |Artemis|Cutter suction dredger|9613795|246864000|
+    |Oceanus|Tug|9639969|246365000| 
+    |Percula|Unknown|N/A|244060124|
+
+    Filtering the GFW data to cover only these vessels reveals a clear pattern in their recent activity: while occasionally anchoring at various other points in Palma Bay, they have primarily been operating along a curved path stretching from the export terminal at the south of the bay to the Cabo Delgado peninsula near its north-eastern end.
+  </script>
+  <script id="gfw-map" type="text/html">
+    <figure style="max-width:100%">
+      <img src="assets/GFW-fishingmap-8_26_2025, 8_57_41 PM.png" />
+      <figcaption>A view of selected Van Oord vessels' activity from the <a href="https://globalfishingwatch.org/map">Global Fishing Watch map</a>.</figcaption>
+    </figure>
+    <hr />
+  </script>
+  <script id="project-docs" type="text/markdown">
+    ## Project documentation
+
+    A review of [project documentation](https://www.mozambiquelng.co.mz/wp-content/uploads/2024/01/mz-000-am1-hs-rpt-00002_eshia_executive_summary_and_update-05-19-2020.pdf) confirms that the path traced by Van Oord's vessels follows the currently proposed route of the Golfinho pipeline, which is intended to bring gas from offshore fields to the export terminal, where it will be liquefied and loaded on to LNG tankers.
+
+    Communications between the project and its major international lenders, obtained from the Italian export credit agency via a freedom of information request [NEED TO LINK THIS IF WE CAN], reveal that the pipeline route has been modified several times due to its potential to impact marine biodiversity hotspots in Palma Bay, including pristine coral reefs. Particular attention has been paid to a section referred to as the "reef crossing", where the pipeline exits the bay.
+
+    A low-resolution sensitivity map included in a Q4 2020 report to the project's lenders reveals the key issue at stake, showing the pipeline (in black) threading its way through areas of the local marine environment marked "high sensitivity area". In an accompanying habitat map on the same page, these areas are marked "live coral framework". While the updated pipeline route minimises the area of coral traversed, there is no plausible route that avoids high sensitivity coral habitats entirely.
+  </script>
+  <script id="gfw-map" type="text/html">
+    <figure>
+      <img src="assets/sensitivity-map.jpg" width=100% />
+      <figcaption>A map of sensitive marine habitats in the vicinity of the Golfinho pipeline route, from a Q4 2020 report to Mozambique LNG's lenders.</figcaption>
+    </figure>
+    <hr />
+  </script>
+  <script id="satellite-intro" type="text/markdown">
+    ## Satellite imagery
+
+    Satellite imagery allows us to observe Van Oord's dredging activity — and its impacts on the marine environment — more closely. The image below, taken on 27 December 2024, shows the cutter suction dredger Artemis dredging a 130m-wide trench across the Cabo Delgado peninsula, directly destroying an area of live coral in its path. In addition to these direct impacts, the large sediment plumes visible in the image are likely to significantly impact marine life over a much wider area.
+  </script>
+  <script id="sediment-image" type="text/html">
+    <figure style="max-width:100%">
+      <img src="assets/2024-12-27-00_00_2024-12-27-23_59_Sentinel-2_L2A_True_color.jpg" width=100% />
+      <figcaption>Cutter suction dredger Artemis creating a channel across the Cabo Delgado peninsula, 27 December 2024. Satellite image: ESA/Sentinel-2.</figcaption>
+    </figure>
+  </script>
+  <script id="satellite-zoom" type="text/markdown">
+    A more recent satellite image from 25 July 2025 shows the completed "reef crossing" and its surrounding environment more clearly, including large areas of live coral (dark patches to the left) in close proximity to the trench. Coral in the direct path of the pipeline has been completely removed.
+  </script>
+  <script id="sediment-image" type="text/html">
+    <figure style="max-width:100%">
+      <img src="assets/2025-07-25-00_00_2025-07-25-23_59_Sentinel-2_L2A_True_color.jpg" width=100% />
+      <figcaption>The completed channel, showing areas of coral more clearly, 25 July 2025. Satellite image: ESA/Sentinel-2<figcaption>
+    </figure>
+    <hr />
+  </script>
+  <script id="conclusions" type="text/markdown">
+    ## Conclusions
+
+    While media reports have consistently stated that work on Mozambique LNG has been completely suspended, our analysis shows significant activity by the project's primary marine contractor extending from October 2024 to the middle of June 2025.
+
+    Van Oord's dredging work provides a strong signal that Mozambique LNG's operator, TotalEnergies, is preparing for a full resumption of construction on the project, despite a [persistently challenging](https://news.un.org/en/story/2025/08/1165560) security environment. However, it also highlights a key challenge that faces the project even if construction does restart: building offshore and near-shore oil and gas infrastructure in a marine environment that is globally significant for its biodiversity.
+
+    While the project's preliminary communications with lenders discuss plans to mitigate the impacts of this work, it is not clear that the concrete effects of these actions — observable in real-time via remote sensing data, and ranging from smothering with sediment to direct destruction and removal — have yet been communicated to stakeholders.
+  </script>
+  <script id="duckdb" type="module">
     // Should be able to remove this in future versions of Notebook Kit
     const db = DuckDBClient.of();
   </script>
