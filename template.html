@@ -6,27 +6,49 @@
     <style type="text/css">
       @import url("observable:styles/index.css");
       @import url("https://rsms.me/inter/inter.css");
+
       :root {
         font-family: Inter, sans-serif;
         font-feature-settings: 'liga' 1, 'calt' 1;
       }
+
       @supports (font-variation-settings: normal) {
         :root { font-family: InterVariable, sans-serif; }
       }
+
       svg#logo {
         width: 50px;
         fill: white;
         float: right;
         margin-left: 20px;
       }
+
       p#footer {
         font-size: 14px;
       }
+
       p a {
         color: var(--theme-foreground) !important;
         text-decoration: underline !important;
       }
-    </style>
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }   
+
+      li {
+        position: relative;
+        padding-left: 1.2em;
+      }
+
+      li::before {
+        content: "\3e";
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+</style>
   </head>
   <body>
     <main>
